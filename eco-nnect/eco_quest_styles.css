@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FBE8E7;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .points {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+main {
+    padding: 2rem;
+}
+
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.button-row button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.button-row button img {
+    height: 40px;
+}
+
+.tasks {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.task {
+    width: 200px;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #ffffff;
+}
+
+.task img {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.task p {
+    font-size: 1rem;
+    margin: 0;
+}
