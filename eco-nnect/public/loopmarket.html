@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Marketplace</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffcf33;
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            color: #333;
+        }
+
+        header img {
+            height: 40px;
+        }
+
+        header .points {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .sidebar {
+            flex: 1;
+            background-color: #ff8c00;
+            border-radius: 10px;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .main {
+            flex: 3;
+        }
+
+        .main header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            color: black;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card img {
+            background: #ddd;
+            height: 100px;
+        }
+
+        .card .price {
+            font-weight: bold;
+        }
+
+        .placeholder-box {
+            background: #ddd;
+            height: 150px;
+            border-radius: 10px;
+        }
+
+        .search-bar {
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div><img src="src/assets/common-use/logoImage.svg" alt="Logo">EC</div>
+    <div class="points">Points: 500</div>
+</header>
+<section class="container">
+
+    <div class="sidebar">
+        <h2>Hi Olivia 👋</h2>
+        <p>What are you looking for today?</p>
+        <input type="text" class="search-bar" placeholder="Search Item">
+    </div>
+
+    <div class="main">
+        <header>
+            <div>
+                <select>
+                    <option>Recent</option>
+                    <option>Low to High</option>
+                    <option>High to Low</option>
+                </select>
+                <select>
+                    <option>All</option>
+                    <option>Category 1</option>
+                    <option>Category 2</option>
+                </select>
+            </div>
+            <button>Create new item</button>
+        </header>
+        <div class="grid">
+            <div class="card">
+                <div class="src/assets/common-use/tv.svg"></div>
+                <h3>Television</h3> 
+                <p>Smart TV in great condition. HD/4K resolution, multiple HDMI ports, and built-in apps like Netflix & YouTube. No cracks or dead pixels. Remote included.</p> 
+                <p class="price">Fixed Price: $300</p> 
+            </div>
+            <div class="card">
+                <div class="src/assets/common-use/bicycle.svg"></div>
+                <h3>Bicycle</h3> 
+                <p>Good condition mountain bike with front suspension. 21-speed Shimano gears, disc brakes, and knobby tires for off-road riding.</p> 
+                <p class="price">Open Bidding: $175</p> 
+            </div>
+            <div class="card">
+                <div class="src/assets/common-use/laptop.svg"></div>
+                <h3>Dell Laptop</h3>   
+                <p>Laptop in great condition. Fast processor, plenty of storage, and good battery life. Comes with charger. Light wear but works perfectly.</p> 
+                <p class="price">Fixed Price: $400</p> 
+            </div>
+            <div class="card">
+                <div class="src/assets/common-use/chair.svg"></div>
+                <h3>Office Chair</h3> 
+                <p>Comfortable ergonomic office chair with adjustable height and armrests. Smooth rolling wheels and breathable mesh back. Minor wear but fully functional.</p>
+                <p class="price">Fixed Price: $50</p> 
+            </div>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>

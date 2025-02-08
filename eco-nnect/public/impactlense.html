@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Impact Stats</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .points {
+            font-size: 18px;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            align-items: start;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .tree-counter {
+            background-color: #ffd95b;
+        }
+
+        .tree-counter h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .tree-counter p {
+            font-size: 40px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .tree-counter img {
+            width: 100px;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        .log-items {
+            background-color: #d4f9d6;
+        }
+
+        .log-items input, 
+        .log-items select, 
+        .log-items button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .log-items button {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        .log-items img {
+            width: 40px;
+            height: auto;
+            margin: 10px 5px;
+        }
+
+        .metrics {
+            background-color: #b3d8ff;
+        }
+
+        .metrics h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .metrics .chart {
+            display: none;
+        }
+
+        .metrics img {
+            width: 50px;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        .data-wheel {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #ffb6c1 40%, /* Pastel pink */
+                #90ee90 30%, /* Pastel green */
+                #add8e6 30%  /* Pastel blue */
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px auto;
+        }
+
+        .key {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .key ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .key li {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .key span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .key .pink {
+            background-color: #ffb6c1;
+        }
+
+        .key .green {
+            background-color: #90ee90;
+        }
+
+        .key .blue {
+            background-color: #add8e6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="src/assets/common-use/logoImage.svg" alt="Eco Impact Logo">
+        </div>
+        <div class="points">Points: <strong>0</strong></div>
+    </header>
+
+    <main>
+        <div class="card tree-counter">
+            <h2>Tree Counter</h2>
+            <img src="src/assets/impact-lens/plantIcon.svg" alt="Tree Icon">
+            <p>500</p>
+        </div>
+
+        <div class="card log-items">
+            <h2>Log Items</h2>
+            <input type="text" placeholder="What is the item?">
+            <select>
+                <option>Category</option>
+                <option>Recyclable Material</option>
+                <option>Energy Conservation</option>
+                <option>Water Waste</option>
+                <option>Composting</option>
+                <option>General Waste</option>
+            </select>
+            <button onclick="saveToBackend('recycle')">Recycle</button>
+            <button onclick="saveToBackend('return')">Return</button>
+            <div>
+                <img src="eco-nnect/src/assets/impact-lens/recyclingicon.svg" alt="Recycle Icon">
+                <img src="eco-nnect/src/assets/impact-lens/returnicon.svg" alt="Return Icon">
+            </div>
+        </div>
+
+        <div class="card metrics">
+            <h2>Your Overall Metrics</h2>
+            <div class="data-wheel">Impact</div>
+            <div class="key">
+                <h3>Key:</h3>
+                <ul>
+                    <li><span class="pink"></span>Recyclable Material</li>
+                    <li><span class="green"></span>Energy Conservation</li>
+                    <li><span class="blue"></span>Water Waste</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

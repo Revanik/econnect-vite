@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Eco-nnect</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .logo-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #e8faf0;
+        }
+        .logo-section img {
+            width: 150px;
+            margin-bottom: 15px;
+        }
+        .logo-section h1 {
+            font-size: 2rem;
+            color: #38b76c;
+            margin: 0;
+        }
+        .logo-section p {
+            margin-top: 5px;
+            color: #333;
+            font-size: 0.9rem;
+        }
+        .form-section {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .form-section h2 {
+            color: #f5a623;
+            margin-bottom: 10px;
+        }
+        .form-section p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            background-color: #38b76c;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .btn:hover {
+            background-color: #2e9c5a;
+        }
+        .divider {
+            text-align: center;
+            margin: 10px 0;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        .signin {
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .signin a {
+            color: #f5a623;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .signin a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-section">
+            <a href="landing-page.html">
+                <img src="src/assets/common-use/logoImage.svg" alt="Eco-nnect logo">
+            </a>
+            <h1>Eco-nnect</h1>
+            <p>Join a community of change makers!</p>
+        </div>
+        <div class="form-section">
+            <h2>Join us Now!!</h2>
+            <p>Let’s create your account</p>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="admin@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn">Sign up</button>
+            </form>
+            <div class="divider">OR</div>
+            <div class="signin">
+                Have an account already? <a href="#">Sign-in</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (name && email && password) {
+                alert('Sign-up successful!');
+                // Here, you can redirect the user or process the data further
+                window.location.href = 'dashboard.html'; // Redirect to a welcome page
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Tasks Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #fbe8f5 0%, #ffccd5 100%);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header img {
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .header .points {
+            font-size: 18px;
+            color: #ff9900;
+            font-weight: bold;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .container h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .task-buttons {
+            margin: 20px 0;
+        }
+
+        .task-buttons button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #ff9900;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .task-buttons button:hover {
+            background-color: #cc7a00;
+        }
+
+        .task-buttons button:nth-child(1) {
+            background-color: #ff9900;
+        }
+
+        .task-buttons button:nth-child(1):hover {
+            background-color: #cc7a00;
+        }
+
+        .task-buttons button:nth-child(1):active {
+            background-color: #ff7f50;
+        }
+
+        .task-buttons button:nth-child(1) {
+            background-color: #ff9900;
+        }
+
+        .task-buttons button:nth-child(2) {
+            background-color: #00bfff;
+        }
+
+        .tasks {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .task {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .task h3 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .task p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .task img {
+            width: 60px;
+            margin: 10px 0;
+        }
+
+        .task .points {
+            font-size: 16px;
+            font-weight: bold;
+            color: #00a651;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="src/assets/common-use/logoImage.svg" alt="Eco-nnect Logo" onclick="location.href='dashboard.html'">
+        <div class="points">Points: 500</div>
+    </div>
+
+    <div class="container">
+        <h1>Complete these tasks to earn points!</h1>
+        <div class="task-buttons">
+            <button onclick="location.href='leaderboard.html'">Leader Board</button>
+            <button onclick="location.href='impactlense.html'">Add Your Impact</button>
+        </div>
+
+        <div class="tasks">
+            <div class="task">
+                <h3>Meal Plan Master:</h3>
+                <p>Log 3 plant-based meals this week.</p>
+                <img src="src/assets/eco-quest/mealPlanTask.svg" alt="Plant Icon">
+                <div class="points">+50</div>
+            </div>
+
+            <div class="task">
+                <h3>Plastic-Free Pro:</h3>
+                <p>Go 5 days without using single-use plastics.</p>
+                <img src="src/assets/eco-quest/plasticFreeTask.svg" alt="Plastic Icon">
+                <div class="points">+80</div>
+            </div>
+
+            <div class="task">
+                <h3>Speedy and Wet:</h3>
+                <p>Limit your shower to 30 minutes for a week.</p>
+                <img src="src/assets/eco-quest/speedyAndWetTask.svg" alt="Water Icon">
+                <div class="points">+100</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

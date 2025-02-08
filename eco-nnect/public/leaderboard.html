@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .leaderboard-container {
+      width: 80%;
+      max-width: 900px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #f8f9fa;
+    }
+
+    header .logo img {
+      width: 40px;
+      height: 40px;
+    }
+
+    header .points {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    header .points img {
+      width: 24px;
+      height: 24px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: #ff7e00;
+      margin: 20px 0;
+    }
+
+    .podium {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 15px;
+      padding: 20px 0;
+    }
+
+    .podium-step {
+      width: 100px;
+      background-color: #e0f7fa;
+      border-radius: 10px;
+      padding: 10px 0;
+    }
+
+    .podium-step img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .podium-step p.name {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .podium-step p.points {
+      font-size: 0.9rem;
+    }
+
+    .first {
+      background-color: #c8e6c9;
+      height: 150px;
+    }
+
+    .second {
+      background-color: #f8bbd0;
+      height: 120px;
+    }
+
+    .third {
+      background-color: #bbdefb;
+      height: 110px;
+    }
+
+    .catching-up {
+      background-color: #e3f2fd;
+      padding: 15px 0;
+      border-top: 2px solid #f1f1f1;
+    }
+
+    .catching-up h2 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .catching-up-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .catching-up-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .catching-up-item img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .catching-up-item p {
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="leaderboard-container">
+    <header>
+      <div class="logo">
+        <img src="src/assets/common-use/logoImage.svg" alt="Eco-nnect Logo">
+      </div>
+      <div class="points">
+        <span>Points: <strong>0</strong></span>
+        <img src="eco-nnect/public/src/assets/common-use/menuBar/userIcon.svg" alt="Profile Icon">
+      </div>
+    </header>
+    <main>
+      <h1>Leaderboard!</h1>
+      <div class="leaderboard">
+        <div class="podium">
+          <div class="podium-step second">
+            <img src="src/assets/leader-board/twoPlantIcon.svg" alt="Sara's Plant">
+            <p class="name">Sara</p>
+            <p class="points">1340 Pts</p>
+          </div>
+          <div class="podium-step first">
+            <img src="src/assets/leader-board/onePlantIcon.svg" alt="Elena's Plant">
+            <p class="name">Elena</p>
+            <p class="points">1470 Pts</p>
+          </div>
+          <div class="podium-step third">
+            <img src="src/assets/leader-board/threePlantIcon.svg" alt="Olivia's Plant">
+            <p class="name">Olivia</p>
+            <p class="points">1202 Pts</p>
+          </div>
+        </div>
+      </div>
+      <section class="catching-up">
+        <h2>Catching up</h2>
+        <div class="catching-up-list">
+          <div class="catching-up-item">
+            <p class="rank">4</p>
+            <img src="src/assets/leader-board/fourPlace.svg" alt="Ryan's Plant">
+            <p class="name">Ryan</p>
+            <p class="points">1007 Pts</p>
+          </div>
+          <div class="catching-up-item">
+            <p class="rank">5</p>
+            <img src="src/assets/leader-board/fivePlace.svg" alt="Tyler's Plant">
+            <p class="name">Tyler</p>
+            <p class="points">1007 Pts</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
